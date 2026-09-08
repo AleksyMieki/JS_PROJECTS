@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Key Detection</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <script>
+        const table = 'abc';
+        let stringTable = [];
+        let strComp = '';
+        document.addEventListener('keydown', e => {
+            stringTable.push(e.key);
+            checkStrings(stringTable);
+        })
+
+        function tableToString(tab)
+        {
+            let temp ='';
+            tab.forEach(element => {
+                temp += element;
+            });
+
+            return temp;
+        }
+
+        function checkStrings(str1)
+        {
+            strComp = tableToString(str1);
+
+            if(strComp === table)
+            {
+                console.log('yes');
+                strComp ='';
+            }
+        }
+        
+    </script>
+  </body>
+</html>
